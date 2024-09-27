@@ -6,7 +6,7 @@ TITLE [GitSync %gs%] Running...
 :: GitSync, by PatoFlamejanteTV
 :: ----------------------------
 
-set title=COMMIT Feito automaticamente pelo GitSync
+set title=GS %gs%
 echo GitSync current configs:
 echo.
 echo DELAY atual: %delay%
@@ -21,7 +21,7 @@ For /f "tokens=1-2 delims=/:" %%a in ("%TIME%") do (set mytime=%%a:%%b)
 git pull
 git add *
 git push
-git commit -m "[GitSync V:%gs%] %title%" -m "MOTIVO: Chart com mais de 200k notas || DATA (24 horas): %mytime%."
+git commit -m "[GitSync V:%gs%] %title%" -m "%gs% || WHY: Tests || DATA (24 horas): %mytime%."
 :: timeout %delay% /nobreak
 timeout %delay%
 :: cls
