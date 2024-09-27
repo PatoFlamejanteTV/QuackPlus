@@ -1,0 +1,14 @@
+{
+    "schedule": "daily",
+    "ignoredFiles": [
+        "icon-*",
+        "win-*",
+        "*OG*",
+        "*HD*",
+        "*Full*",
+        "*raw*",
+        "*Original*",
+    ],
+    "minKBReduced": 1,
+    "aggressiveCompression": true
+}
