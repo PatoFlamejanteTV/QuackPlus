@@ -14,7 +14,7 @@ Thats bcause im not vri gud at engrish and im BRASIL!!! :feijoada: :br_miku:
 local QuackPlus = {} -- do NOT use "!" in variable names, or else...
 QuackPlus.__index = QuackPlus
 
-local Objects = {} -- goofy ahh OOP test
+local Objects = {} -- OP test
 Objects.__index = Objects
 
 function Set:__add(otherSet)
