@@ -1,11 +1,8 @@
 name: pull request linter
 
 on:
-  pull_request:
-    branches:
-      - master
-      - release/*
-      - feature/*
+  push:
+    branches: [ "main" ]
 env:
   SOURCE_FOLDER: src
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
