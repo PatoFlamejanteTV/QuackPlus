@@ -17,4 +17,4 @@ jobs:
       - name: Install jj
         run: npm install -g pretty-mini-json
       - name: Run jj
-        run: jj -u < src/data/main.json
+        run: jj -u < $SOURCE_FOLDER/data/main.json

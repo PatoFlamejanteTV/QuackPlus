@@ -54,8 +54,8 @@ function Objects.New(arg1, arg2, ...) -- silly OOP thing, based on "Roblox OOP (
 end
 
 
-function wmsg()
+--[[function wmsg()
 	print(QPDData.WelcomeMSG.WelcomeMSG)
-end
+end]]
 return QuackPlus
 -- quack
