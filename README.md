@@ -17,6 +17,9 @@ QuackPlus still in alpha! Please report bugs/glitches or suggest things to me!
 Btw i think this can also be used in pure `lua` If you adjust some ~5 lines of code.
 
 ## License(s)
-Entire project including code and documentation: MIT License
+### Original code/Arts
+Entire project including code and documentation: `MIT License`
 
-Art(s), banner(s), logo(s): CC BY 4.0
+Art(s), banner(s), logo(s): `CC BY 4.0`
+### Ported/transpiled code
+Scratch VM ported (**J**ava**Script** -> Lua) code (`/src/shared/modules/Cast.luau`, `/src/shared/modules/Color.luau`, `/src/shared/modules/Timer.luau`) is under the `MIT License`.
