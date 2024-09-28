@@ -18,6 +18,9 @@ jobs:
     - name: Install luamin
       run: npm install -g luamin
 
+    - name: Debug - List Luau files
+      run: find . -name "*.luau" -print | tr '\n' ' '
+
     - name: Minify Luau files
       run: |
         find . -name "*.luau" -print0 | while IFS= read -r -d '' file; do
