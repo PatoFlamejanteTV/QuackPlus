@@ -26,7 +26,6 @@
     "Workspace": {
       "$properties": {
         "FilteringEnabled": true
-          "$path": "src/workspace"
       },
       "Baseplate": {
         "$className": "Part",
