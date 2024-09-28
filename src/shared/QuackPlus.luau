@@ -20,6 +20,7 @@ local Objects = {} -- OOP test
 Objects.__index = Objects
 
 local Set = nil 
+local HttpService = game:GetService("HttpService")
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 --local Cast = require(ReplicatedStorage.Shared.modules.Cast)
@@ -27,7 +28,10 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local PlayerEvents = require(ReplicatedStorage.Shared.modules.PlayerEvents)
 --local Timer = require(ReplicatedStorage.Shared.modules.Timer)
 
-PlayerEvents.WhenUserJoins(print())
+local RawQPData = ReplicatedStorage.Shared.data.main -- main.json
+local QPDData = HttpService:JSONDecode(RawQPData.source) -- contents
+
+PlayerEvents.WhenUserJoins(wmsg()) -- le message
 
 function Set:__add(otherSet) -- metatable(?) things
 	local result = Set.new()
@@ -51,5 +55,9 @@ function Objects.New(arg1, arg2, ...) -- silly OOP thing, based on "Roblox OOP (
 	return newObject -- here you are returning the object to the function.
 end
 
+
+function wmsg()
+	print(QPDData.WelcomeMSG.WelcomeMSG)
+end
 return QuackPlus
 -- quack
