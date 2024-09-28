@@ -13,3 +13,8 @@ You can copy and paste all file contents (_the `.luau` ones_) into Roblox Studio
 QuackPlus still in alpha! Please report bugs/glitches or suggest things to me!
 
 Btw i think this can also be used in pure `lua` If you adjust some ~5 lines of code.
+
+## License(s)
+Entire project including code and documentation: MIT License
+
+Art(s), banner(s), logo(s): CC BY 4.0
