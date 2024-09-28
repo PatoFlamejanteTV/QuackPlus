@@ -7,17 +7,27 @@ Quack!, or QuackPlus.
                         (QuackPlusScript)
 ]]
 ------------------------------------------------------------------------
+
 --[[
 Btw [SOME] parts of comments, docs, etc. are NOT IN ENGLISH!
 Thats bcause im not vri gud at engrish and im BRASIL!!! :feijoada: :br_miku:
 ]]
+
 local QuackPlus = {} -- do NOT use "!" in variable names, or else...
 QuackPlus.__index = QuackPlus
 
 local Objects = {} -- OOP test
 Objects.__index = Objects
 
-local Set = nil -- selene "2 alerts" moment
+local Set = nil 
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+--local Cast = require(ReplicatedStorage.Shared.modules.Cast)
+--local Color = require(ReplicatedStorage.Shared.modules.Color)
+local PlayerEvents = require(ReplicatedStorage.Shared.modules.PlayerEvents)
+--local Timer = require(ReplicatedStorage.Shared.modules.Timer)
+
+PlayerEvents.WhenUserJoins(print())
 
 function Set:__add(otherSet) -- metatable(?) things
 	local result = Set.new()
@@ -30,16 +40,12 @@ function Set:__add(otherSet) -- metatable(?) things
 	return result
 end
 
---[[function echo(args) -- seems silly, is silly, passed with an 10/10 sillyness test. LITERAL PRINT("")
-	print(args)
-end]]
-
-function Objects.New(arg1, arg2) -- silly OOP thing, based on "Roblox OOP (Object Oriented Programming)"
-	-- TODO: add more things
+function Objects.New(arg1, arg2, ...) -- silly OOP thing, based on "Roblox OOP (Object Oriented Programming)"
 	-- https://devforum.roblox.com/t/roblox-oop-object-oriented-programming/1639499
 	local newObject = {}
 	newObject.arg1 = arg1
 	newObject.arg2 = arg2
+	newObject.other = ...
 	setmetatable(newObject, Objects)
 	print(newObject) -- debug(?)
 	return newObject -- here you are returning the object to the function.
