@@ -25,13 +25,11 @@ local HttpService = game:GetService("HttpService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 --local Cast = require(ReplicatedStorage.Shared.modules.Cast)
 --local Color = require(ReplicatedStorage.Shared.modules.Color)
-local PlayerEvents = require(ReplicatedStorage.Shared.modules.PlayerEvents)
+--local PlayerEvents = require(ReplicatedStorage.Shared.modules.PlayerEvents)
 --local Timer = require(ReplicatedStorage.Shared.modules.Timer)
 
 local RawQPData = ReplicatedStorage.Shared.data.main -- main.json
 local QPDData = HttpService:JSONDecode(RawQPData.source) -- contents
-
-PlayerEvents.WhenUserJoins(wmsg()) -- le message
 
 function Set:__add(otherSet) -- metatable(?) things
 	local result = Set.new()

@@ -1,3 +1,6 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 -- QuackPlus test: displays the QuackPlus table using print()
-local QuackPlus = require(game:GetService("ReplicatedStorage").Shared.QuackPlus)
-print('game:GetService("ReplicatedStorage").Shared.QuackPlus: '..QuackPlus)
+
+local QuackPlus = require(ReplicatedStorage.Shared.QuackPlus)
+
+QuackPlus.wmsg()
