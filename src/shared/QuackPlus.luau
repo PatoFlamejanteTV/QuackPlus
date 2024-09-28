@@ -43,4 +43,5 @@ function Objects.New(arg1, arg2) -- silly OOP thing, based on "Roblox OOP (Objec
 	return newObject -- here you are returning the object to the function.
 end
 
-return QuackPlus -- quack
+return QuackPlus
+-- quack
