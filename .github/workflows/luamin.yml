@@ -17,4 +17,4 @@ jobs:
       - name: install Luamin
         run: npm install -g luamin
       - name: Luamin
-        run: luamin src/
+        run: luamin -f src/*
