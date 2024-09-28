@@ -30,9 +30,9 @@ function Set:__add(otherSet) -- metatable(?) things
 	return result
 end
 
-function echo(args) -- seems silly, is silly, passed with an 10/10 sillyness test. LITERAL PRINT("")
+--[[function echo(args) -- seems silly, is silly, passed with an 10/10 sillyness test. LITERAL PRINT("")
 	print(args)
-end
+end]]
 
 function Objects.New(arg1, arg2) -- silly OOP thing, based on "Roblox OOP (Object Oriented Programming)"
 	-- TODO: add more things
