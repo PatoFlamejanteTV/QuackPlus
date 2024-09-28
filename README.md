@@ -1,4 +1,6 @@
 # QuackPlus
+<center><img src=".github/img/358 Sem Título_20240927212551.png"></center>
+
 **Quack! _(or QuackPlus)_ is an module made for Roblox Studio!**
 
 ## Using/Installing/building
