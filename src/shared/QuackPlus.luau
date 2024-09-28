@@ -17,6 +17,8 @@ QuackPlus.__index = QuackPlus
 local Objects = {} -- OOP test
 Objects.__index = Objects
 
+local Set = nil -- selene "2 alerts" moment
+
 function Set:__add(otherSet) -- metatable(?) things
 	local result = Set.new()
 	for entry in self do
