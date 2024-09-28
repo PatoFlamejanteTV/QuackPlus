@@ -14,10 +14,10 @@ Thats bcause im not vri gud at engrish and im BRASIL!!! :feijoada: :br_miku:
 local QuackPlus = {} -- do NOT use "!" in variable names, or else...
 QuackPlus.__index = QuackPlus
 
-local Objects = {} -- OP test
+local Objects = {} -- OOP test
 Objects.__index = Objects
 
-function Set:__add(otherSet)
+function Set:__add(otherSet) -- metatable(?) things
 	local result = Set.new()
 	for entry in self do
 		result[entry] = true
@@ -43,4 +43,4 @@ function Objects.New(arg1, arg2) -- silly OOP thing, based on "Roblox OOP (Objec
 	return newObject -- here you are returning the object to the function.
 end
 
-return QuackPlus
+return QuackPlus -- quack
