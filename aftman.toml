@@ -3,5 +3,7 @@
 
 # To add a new tool, add an entry to this table.
 [tools]
+stylua = "johnnymorganz/stylua@0.14.2"
 rojo = "rojo-rbx/rojo@7.4.4"
-# rojo = "rojo-rbx/rojo@6.2.0"
+wally = "upliftGames/wally@0.3.2"
+# darklua = "seaofvoices/darklua@0.13.1"
