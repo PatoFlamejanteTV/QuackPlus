@@ -1,0 +1,20 @@
+name: luamin
+
+on:
+  push:
+    branches: [ "main" ]
+env:
+  SOURCE_FOLDER: src
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  run-selene-linter:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install NPM
+        uses: actions/setup-node@v4.0.4
+      - name: install Luamin
+        run: npm install -g luamin
+      - name: Luamin
+        run: luamin src/
