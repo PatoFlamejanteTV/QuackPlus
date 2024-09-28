@@ -11,3 +11,5 @@ You can copy and paste all file contents (_the `.luau` ones_) into Roblox Studio
 
 ## Notes
 QuackPlus still in alpha! Please report bugs/glitches or suggest things to me!
+
+Btw i think this can also be used in pure `lua` If you adjust some ~5 lines of code.
