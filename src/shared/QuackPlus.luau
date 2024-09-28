@@ -1,5 +1,5 @@
-local Workspace = game:GetService("Workspace")
 --!strict
+--local Workspace = game:GetService("Workspace")
 --[[
 Quack!, or QuackPlus.
     Scripts based/used/imported this
@@ -22,43 +22,26 @@ local Part = document.Instance.new("Part")
 local QuackPlus = {} -- do NOT use "!" in variable names, or else...
 QuackPlus.__index = QuackPlus
 
-local Objects = {} -- OOP test
-Objects.__index = Objects
+local Object = {}
+Object.__index = Object
 
-local Set = nil 
-local document = Workspace -- idk, JS moment
-local Document = document -- idk, JS moment
 --local HttpService = game:GetService("HttpService")
 
 --local ReplicatedStorage = game:GetService("ReplicatedStorage")
---local Cast = require(ReplicatedStorage.Shared.modules.Cast)
---local Color = require(ReplicatedStorage.Shared.modules.Color)
---local PlayerEvents = require(ReplicatedStorage.Shared.modules.PlayerEvents)
---local Timer = require(ReplicatedStorage.Shared.modules.Timer)
+--[[local Cast = require(ReplicatedStorage.Shared.modules.Cast)
+local Color = require(ReplicatedStorage.Shared.modules.Color)
+local PlayerEvents = require(ReplicatedStorage.Shared.modules.PlayerEvents)
+local Timer = require(ReplicatedStorage.Shared.modules.Timer)]]
 
 --local RawQPData = ReplicatedStorage.Shared.data.main -- main.json
 --local QPDData = HttpService:JSONDecode(RawQPData.source) -- contents, but its never used
 
-function Set:__add(otherSet) -- metatable(?) things
-	local result = Set.new()
-	for entry in self do
-		result[entry] = true
-	end
-	for entry in otherSet do
-		result[entry] = true
-	end
-	return result
-end
-
-function Objects.New(arg1, arg2, ...) -- silly OOP thing, based on "Roblox OOP (Object Oriented Programming)"
-	-- https://devforum.roblox.com/t/roblox-oop-object-oriented-programming/1639499
-	local newObject = {}
-	newObject.arg1 = arg1
-	newObject.arg2 = arg2
-	newObject.other = ...
-	setmetatable(newObject, Objects)
-	print(newObject) -- debug(?)
-	return newObject -- here you are returning the object to the function.
+function Object.Create(instance, name, arg1, arg2) -- OOP (?)
+	local self = setmetatable({}, QuackPlus)
+	self.Instance = Instance.new(instance)
+	self.Name = name
+	self.arg1 = arg1
+	self.arg2 = arg2
 end
 
 
