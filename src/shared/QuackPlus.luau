@@ -1,3 +1,4 @@
+local Workspace = game:GetService("Workspace")
 --!strict
 --[[
 Quack!, or QuackPlus.
@@ -13,6 +14,11 @@ Btw [SOME] parts of comments, docs, etc. are NOT IN ENGLISH!
 Thats bcause im not vri gud at engrish and im BRASIL!!! :feijoada: :br_miku:
 ]]
 
+--[[ Objetivos:
+local Part = document.Instance.new("Part")
+------------------------------------------
+]]
+
 local QuackPlus = {} -- do NOT use "!" in variable names, or else...
 QuackPlus.__index = QuackPlus
 
@@ -20,6 +26,8 @@ local Objects = {} -- OOP test
 Objects.__index = Objects
 
 local Set = nil 
+local document = Workspace -- idk, JS moment
+local Document = document -- idk, JS moment
 --local HttpService = game:GetService("HttpService")
 
 --local ReplicatedStorage = game:GetService("ReplicatedStorage")
