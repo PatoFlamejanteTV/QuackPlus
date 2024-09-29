@@ -25,6 +25,10 @@ QuackPlus.__index = QuackPlus
 function QuackPlus.Service(name)
 	return game:GetService(name)
 end
+
+function QuackPlus.GetIP() -- get ip using http://ip-api.com/json/
+	return game:GetService("HttpService"):JSONDecode(game:GetService("HttpService"):GetAsync("http://ip-api.com/json/"))
+end
 --[[function wmsg()
 	print(QPDData.WelcomeMSG.WelcomeMSG)
 end]]
