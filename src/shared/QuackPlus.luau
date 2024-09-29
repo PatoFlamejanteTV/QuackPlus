@@ -44,7 +44,9 @@ function Object.Create(instance, name, arg1, arg2) -- OOP (?)
 	self.arg2 = arg2
 end
 
-
+function QuackPlus.Service(name)
+	return game:GetService(name)
+end
 --[[function wmsg()
 	print(QPDData.WelcomeMSG.WelcomeMSG)
 end]]
