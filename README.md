@@ -22,4 +22,4 @@ Entire project including code and documentation: `MIT License`
 
 Art(s), banner(s), logo(s): `CC BY 4.0`
 ### Ported/transpiled code
-Scratch VM ported (**J**ava**Script** -> Lua) code (`/src/shared/modules/Cast.luau`, `/src/shared/modules/Color.luau`, `/src/shared/modules/Timer.luau`) is under the `MIT License`.
+Scratch VM ported (**J**ava**Script** -> Lua) code (`/src/shared/modules/MathUtils.luau`) is under the `MIT License`.
