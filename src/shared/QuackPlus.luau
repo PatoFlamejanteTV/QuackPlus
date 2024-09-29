@@ -34,8 +34,10 @@ end
 
 function QP.Play(audio, loop)
 	if loop then
+		--print("Playing audio "..audio)
 		return audio:Play(), audio.Looped == true
 	end if not loop then
+		--print("Playing audio "..audio)
 		return audio:Play(), audio.Looped == false
 	end
 	--print("Playing " .. audio)
