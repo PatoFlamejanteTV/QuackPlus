@@ -31,4 +31,42 @@ end
 function QP.CurrentY() -- for GUIs
 	return game:GetService("GuiService"):GetGuiInset().Y
 end
+
+function QP.Play(audio, loop)
+	if loop then
+        return audio:Play(), audio.Looped == true
+    end if not loop then
+        return audio:Play(), audio.Looped == false
+    end
+	--print("Playing " .. audio)
+end
+
+function QP.emojiToEmoticon(string)
+	local emoticons =
+		{
+			":D",
+			":)",
+			":0",
+			":(",
+			">:)",
+		}
+	local emojis =
+		{
+			"😄",
+			"😃",
+			"😮",
+			"☹️", -- WHAT (only this emoji is small on studio)
+			"😈"
+		}
+	local function convert(convertedstring) -- convert the string
+		for i, v in pairs(emojis) do
+			if convertedstring == emoticons[i] then
+				return v
+			end
+		end
+		return convertedstring
+	end
+	return convert(string)
+end
+
 return QP
