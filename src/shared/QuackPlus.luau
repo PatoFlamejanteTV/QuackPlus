@@ -1,36 +1,34 @@
 --!strict
---local Workspace = game:GetService("Workspace")
 --[[
 Quack!, or QuackPlus.
-    Scripts based/used/imported this
-    module should be called "QuackScripts"
-    (Btw files exported should be .qps)
-                        (QuackPlusScript)
+    Somethime im going to make an "mini"
+    scripting language called QuackIntScript
+    (Quack Internal Script) just for using in
+    this project...
 ]]
 ------------------------------------------------------------------------
 
---[[
-Btw [SOME] parts of comments, docs, etc. are NOT IN ENGLISH!
-Thats bcause im not vri gud at engrish and im BRASIL!!! :feijoada: :br_miku:
-]]
+local QP = {} -- do NOT use "!" in variable names, or else...
+QP.__index = QP
 
---[[ Objetivos:
-local Part = document.Instance.new("Part")
-------------------------------------------
-]]
-
-local QuackPlus = {} -- do NOT use "!" in variable names, or else...
-QuackPlus.__index = QuackPlus
-
-function QuackPlus.Service(name)
+function QP.Service(name)
 	return game:GetService(name)
 end
 
-function QuackPlus.GetIP() -- get ip using http://ip-api.com/json/
+function QP.GetIP() -- get ip using http://ip-api.com/json/
 	return game:GetService("HttpService"):JSONDecode(game:GetService("HttpService"):GetAsync("http://ip-api.com/json/"))
 end
---[[function wmsg()
-	print(QPDData.WelcomeMSG.WelcomeMSG)
-end]]
-return QuackPlus
--- quack
+
+function QP.GetPlayers()
+	-- get the amount of players
+	return #game:GetService("Players"):GetPlayers()
+end
+
+function QP.CurrentX() -- for GUIs
+	return game:GetService("GuiService"):GetGuiInset().X
+end
+
+function QP.CurrentY() -- for GUIs
+	return game:GetService("GuiService"):GetGuiInset().Y
+end
+return QP
