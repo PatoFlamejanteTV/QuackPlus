@@ -34,10 +34,10 @@ end
 
 function QP.Play(audio, loop)
 	if loop then
-        return audio:Play(), audio.Looped == true
-    end if not loop then
-        return audio:Play(), audio.Looped == false
-    end
+		return audio:Play(), audio.Looped == true
+	end if not loop then
+		return audio:Play(), audio.Looped == false
+	end
 	--print("Playing " .. audio)
 end
 
@@ -68,5 +68,6 @@ function QP.emojiToEmoticon(string)
 	end
 	return convert(string)
 end
+
 
 return QP
